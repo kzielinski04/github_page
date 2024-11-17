@@ -1,6 +1,6 @@
 # 👋 Hello, I'm Kacper Zieliński!
 
-I'm a passionate student with a love for programming. I enjoy building useful and interesting things, whether it’s a full-scale app, a data visualization, or a simple tool.
+I'm a passionate student with a love for programming. I enjoy building useful and interesting things, whether it’s a full-scale app, a game, or a simple tool.
 
 ## 🔗 Connect with Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/Mestfali)
