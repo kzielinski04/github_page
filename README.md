@@ -45,8 +45,6 @@ I'm a passionate student with a love for programming. I enjoy building useful an
 ### Project 1: [TERPGMINAL](https://github.com/kzielinski04/TERPGMINAL)
 📝 **Description**: Simple terminal RPG game created in Python.
 
-**Tech stack**: ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
 ### Project 2: [Managing cinema reservation application](https://github.com/kzielinski04/kino_rezerwacje)
 📝 **Description**: Python app which can used to manage cinema reservations.
 
