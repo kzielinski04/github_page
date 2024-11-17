@@ -69,6 +69,20 @@
             flex-wrap: wrap;
             gap: 1.5rem;
         }
+        /* Skill card with hover effect */
+        .skill {
+            flex: 1 1 calc(50% - 1rem);
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .skill:hover {
+            transform: translateY(-5px); /* Slight lift effect */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow intensity */
+            background-color: #e0f7fa; /* Optional: Light blue background for emphasis */
+        }
           /* Responsive Styles */
           @media (max-width: 768px) 
           {
