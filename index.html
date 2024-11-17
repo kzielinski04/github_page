@@ -151,6 +151,59 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* About Section Styling */
+        #about {
+            background-color: #f4f4f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-theme #about {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+
+        #about h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        #about .about-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        #about .about-content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #about .about-content div {
+            max-width: 500px;
+        }
+
+        body.dark-theme #about p,
+        body.dark-theme #about h2 {
+            color: #f0f0f0;
+        }
+
     </style>
     <script>
         // Check localStorage for saved theme
@@ -192,8 +245,14 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm studying Industrial Usage of IT at Warsaw University of Technology. I love working on interesting problems and learning new technologies.</p>
-        <p>Currently, I'm learning Python, Linux, bash, and Markdown.</p>
+        <div class="about-content">
+            <img src="profile_picture.jpeg" alt="Profile Picture">
+            <div>
+                <p>I'm studying Industrial Usage of IT at Warsaw University of Technology. I love working on interesting problems and learning new technologies.</p>
+                <p>Currently, I'm learning Python, Linux, bash, and Markdown.</p>
+                <p>As an IT student, I enjoy exploring new technologies and working on real-world projects. I'm always looking for ways to improve my skills and knowledge.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
