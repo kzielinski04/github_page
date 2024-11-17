@@ -36,7 +36,7 @@
         body.dark-theme a {
             color: #fff; /* Links white in dark mode */
         }
-        
+
         /* Layout */
         header
         {
@@ -48,6 +48,32 @@
         header h1
         {
             margin-bottom: 0.5rem;
+        }
+          /* Responsive Styles */
+          @media (max-width: 768px) 
+          {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .skill, .project {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 480px) 
+        {
+            section {
+                padding: 2rem 1rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p, nav a {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
