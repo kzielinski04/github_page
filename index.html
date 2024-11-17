@@ -7,6 +7,36 @@
     <link rel="stylesheet" href="style.css">
     <title>Kacper Zieliński's portfolio</title>
     <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff; /* Simple solid background for light theme */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        /* Light and Dark Theme Styles */
+        body.dark-theme {
+            background-color: #121212; /* Dark background */
+            color: #f0f0f0;
+        }
+        body.dark-theme a {
+            color: #fff; /* Links white in dark mode */
+        }
+        
         /* Layout */
         header
         {
@@ -39,5 +69,6 @@
         <p>I'm studying Industrial Usage of IT at Warsaw Univeristy of Technology. I love working on interesting problems and learning new technologies.</p>
         <p>Currently, I'm learning Python, Linux, bash and Markdown.</p>
     </section>
+
 </body>
 </html>
