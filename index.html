@@ -14,25 +14,22 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-        html 
-        {
+        html {
             scroll-behavior: smooth; 
         }
-        body 
-        {
+        body {
             line-height: 1.6;
             color: #333;
             background-color: #fff;
             transition: background-color 0.3s, color 0.3s;
         }
-        a 
-        {
+        a {
             text-decoration: none;
             color: #007bff;
         }
+
         /* Simple links without any button background */
-        nav a
-        {
+        nav a {
             color: #fff;
             padding: 0.8rem 1.5rem;
             font-weight: bold;
@@ -40,11 +37,11 @@
             transition: color 0.3s ease, transform 0.3s ease;
             font-size: 1rem;
         }
-        /* Hover effects for nav links */
         nav a:hover {
             transform: scale(1.2); 
             color: #f0f0f0;
         }
+
         /* Light and Dark Theme Styles */
         body.dark-theme {
             background-color: #121212;
@@ -72,37 +69,28 @@
         }
         
         /* Layout */
-        header
-        {
+        header {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 2rem 1rem;
         }
-        header h1
-        {
+        header h1 {
             margin-bottom: 0.5rem;
         }
-        /* Hover effects for nav links */
-        nav a:hover 
-        {
-            transform: scale(1.2);
-            color: #f0f0f0;
-        }
 
-        section 
-        {
+        section {
             padding: 4rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
         }
 
-        .skills, .projects 
-        {
+        .skills, .projects {
             display: flex;
             flex-wrap: wrap;
             gap: 1.5rem;
         }
+
         /* Skill card with hover effect */
         .skill {
             flex: 1 1 calc(50% - 1rem);
@@ -117,6 +105,16 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             background-color: #e0f7fa;
         }
+
+        /* Dark theme adjustments for skill cards */
+        body.dark-theme .skill {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        body.dark-theme .skill:hover {
+            background-color: #555;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -127,9 +125,8 @@
             color: #fff;
         }
         
-          /* Responsive Styles */
-          @media (max-width: 768px) 
-          {
+        /* Responsive Styles */
+        @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
             }
@@ -141,8 +138,7 @@
             }
         }
 
-        @media (max-width: 480px) 
-        {
+        @media (max-width: 480px) {
             section {
                 padding: 2rem 1rem;
             }
@@ -156,31 +152,33 @@
     </style>
     <script>
         // Check localStorage for saved theme
-        const themeToggle = document.querySelector('.theme-toggle');
-        const currentTheme = localStorage.getItem('theme');
-        
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-theme');
-            themeToggle.textContent = 'Switch to Light Mode';
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.querySelector('.theme-toggle');
+            const currentTheme = localStorage.getItem('theme');
+            
+            if (currentTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeToggle.textContent = 'Switch to Light Mode';
+            }
 
-        // Function to toggle the theme
-        function toggleTheme() {
-            document.body.classList.toggle('dark-theme');
-            const isDark = document.body.classList.contains('dark-theme');
-            themeToggle.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        }
+            // Function to toggle the theme
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-theme');
+                const isDark = document.body.classList.contains('dark-theme');
+                themeToggle.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+        });
     </script>
 </head>
 <body>
     <!-- Theme Toggle Button -->
-    <button class="theme-toggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+    <button class="theme-toggle">Switch to Dark Mode</button>
+    
     <!-- Header Section -->
     <header>
         <h1>Hello, I'm Kacper Zieliński</h1>
         <p>A passionate IT student, eager to learn new technologies and constantly increase skills</p>
-        <br>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -188,30 +186,33 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+    
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>I'm studying Industrial Usage of IT at Warsaw Univeristy of Technology. I love working on interesting problems and learning new technologies.</p>
-        <p>Currently, I'm learning Python, Linux, bash and Markdown.</p>
+        <p>I'm studying Industrial Usage of IT at Warsaw University of Technology. I love working on interesting problems and learning new technologies.</p>
+        <p>Currently, I'm learning Python, Linux, bash, and Markdown.</p>
     </section>
+
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="projects">
             <div class="project">
                 <h3>Managing cinema reservation application</h3>
-                <img src="screen1.jpg"  width = "400" height = "200" alt="Project 1 Screenshot">
-                <p>Python app which can used to manage cinema reservations.</p>
+                <img src="screen1.jpg" width="400" height="200" alt="Project 1 Screenshot">
+                <p>Python app which can be used to manage cinema reservations.</p>
                 <a href="https://github.com/kzielinski04/kino_rezerwacje" target="_blank">View on GitHub</a>
             </div>
             <div class="project">
                 <h3>TERPGMINAL</h3>
-                <img src="screen2.jpg" width = "400" height = "200" alt="Project 2 Screenshot">
+                <img src="screen2.jpg" width="400" height="200" alt="Project 2 Screenshot">
                 <p>Simple terminal RPG game created in Python.</p>
                 <a href="https://github.com/kzielinski04/TERPGMINAL" target="_blank">View on GitHub</a>
             </div>
         </div>
     </section>
+
     <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
@@ -234,6 +235,7 @@
             </div>
         </div>
     </section>
+
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
@@ -244,8 +246,9 @@
             <a href="https://x.com/xMestfali" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
         </p>
     </section>
-     <!-- Footer -->
-     <footer>
+    
+    <!-- Footer -->
+    <footer>
         <p>&copy; 2024 Kacper Zieliński. All rights reserved.</p>
         <p>Powered by GitHub Pages</p>
     </footer>
