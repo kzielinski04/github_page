@@ -14,20 +14,32 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-        html {
+        html 
+        {
             scroll-behavior: smooth; /* Enables smooth scrolling */
         }
-        body {
+        body 
+        {
             line-height: 1.6;
             color: #333;
             background-color: #fff; /* Simple solid background for light theme */
             transition: background-color 0.3s, color 0.3s;
         }
-        a {
+        a 
+        {
             text-decoration: none;
             color: #007bff;
         }
-
+        /* Simple links without any button background */
+        nav a
+        {
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 1rem;
+        }
         /* Light and Dark Theme Styles */
         body.dark-theme {
             background-color: #121212; /* Dark background */
